@@ -1,0 +1,150 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="copyright" content="&copy; WCC - Smart Search & Match">
+  <meta name="keywords" content="Occupation Mapping ESCO-ONET">
+  <meta name="description" content="Mapping of ESCO preferredLabels to ONET job_titles and alternate_titles">
+  <title>Occupation Mapping ESCO-ONET</title>
+  <link href="../../css/wd/style.css" rel="stylesheet" type="text/css">
+</head>
+<BODY background="../../css/wd/bg_main.gif" leftMargin=0 topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0" style="margin-top: 0px; margin-left: 5px; margin-right: 5px;"><center><br>
+<table class="tekst_gwn" align="center" class="stap" cellpadding="0" cellspacing="0" width=100% border=1>
+     <tbody> <tr>
+         
+	<td colspan=11 align=center height=32 class="tekst_gwn"><br> <font size=+1><b>ESCO-ONET Mapping Suggestions for Preferred Label: <font color=brown>3D animator </font></b></font>&nbsp;<br>&nbsp;<br></td>
+        
+</tr>
+ <tr bgcolor='#c6c6c6' align=center style="font-weight:bold;">
+	<td width=40>Rule Nbre</td>
+	<td width=60>ESCO Code</td>
+	<td>ESCO PreferredLabel</td>
+	<td>ONET-Reported/AlternateJobTitle</td>
+	<td width=25>Score_A</td>
+	<td>ONET SOC Code</td>
+	<td>O*NET Occupation Title</td>
+	<td>Score_B</td>
+	<td>Score_C</td>
+	<td>Final Score</td>
+	<td>Selection</td>
+</tr></tbody>
+
+<form action="ESCO2ONET.php" method="POST" name="applyMapping">
+<input type='hidden' name='occupation' value='3D animator'> 
+<tr height=10><td colspan=11></td></tr>
+<tr bgcolor='#e0e0e0'>
+	<td rowspan=1>&nbsp;Rule 1</td>
+	<td rowspan=1>2166_001</td>
+	<td rowspan=1><font color='brown'><b>3D animator</b></font></td>
+	<td>&nbsp;27-1014.00_<font color='green'><b>3D Animator</b></font>
+	<td>&nbsp;100%</td>
+	<td>&nbsp;27-1014.00</td>
+	<td>&nbsp;Multimedia Artists and <font color='green'><b>Animator</b></font>s</td>
+	<td>&nbsp;25%</td>
+	<td>&nbsp;20% - 1/5</td>
+	<td><b>&nbsp;145%</b></td>
+	<td><input type='checkbox' name='mapping[]' value='27-1014.00'></td>
+</tr>
+<tr height=10>
+	<td colspan=11></td>
+</tr>
+<tr bgcolor='#e0e0e0'>
+	<td rowspan=1>&nbsp;Rule 2</td>
+	<td rowspan=1>2166_001</td>
+	<td rowspan=1><font color='brown'><b>3D animator</b></font></td>
+	<td rowspan=1 colspan=8></td>
+</tr>
+<tr height=10><td colspan=11></td></tr>
+<tr bgcolor='#e0e0e0'>
+	<td rowspan=1>&nbsp;Rule 3</td>
+	<td rowspan=1>&nbsp;2166_001</td>
+	<td rowspan=1>&nbsp;<font color='brown'><b>3D <font color='green'><b>animator</b></font></b></font></td>
+	<td>&nbsp;27-1014.00_<font color='green'><b>Animator</b></font></td>
+	<td>&nbsp;54%</td>
+	<td>&nbsp;27-1014.00</td>
+	<td>&nbsp;Multimedia Artists and <font color='green'><b>Animator</b></font>s</td>
+	<td>&nbsp;25%</td>
+	<td>&nbsp;20% - 1/5</td>
+	<td><b>&nbsp;99%</b></td>
+	<td><input type='checkbox' name='mapping[]' value='27-1014.00'></td>
+</tr>
+<tr height=10>
+	<td colspan=11></td>
+</tr>
+<tr bgcolor='#e0e0e0'>
+	<td rowspan=0>&nbsp;Rule 4</td>
+	<td rowspan=0>&nbsp;</td>
+	<td rowspan=0>&nbsp;<font color='brown'><b></b></font></td>
+</tr>
+<tr height=10>
+	<td colspan=11></td>
+</tr>
+<tr bgcolor='#e0e0e0'>
+	<td rowspan=0>&nbsp;Rule 5</td>
+	<td rowspan=0>&nbsp;</td>
+	<td rowspan=0>&nbsp;<font color='brown'><b></b></font></td>
+</tr>
+<tr bgcolor='lightblue'>
+	<td colspan=11 align=center class="tekst_gwn" style="color:grey;">
+<br>&nbsp; <br>&nbsp; <br>&nbsp; <br>
+ <b>Select The O*NET Concept(s) to be mapped:</b> 
+<select name=taxonomy_concept><font size=-1>
+ <option value='Tools and Technology' selected>Tools and Technology</option>
+ <option value='Skills_im'>Skills (importance)</option>
+ <option value='Skills_lv'>Skills (level)</option>
+ <option value='Work Context' disabled>Work Context</option>
+ <option value='Interests' disabled>Interests (RIASEC)</option>
+ <option value='Work Activities' disabled>Work Activities</option>
+ <option value='' disabled></option>
+</font></select>
+<input type='submit' value='Apply Mapping' onclic_k="return popitup('ESCO2ONET.php','xtf',300,200)" class="tekst_gwn" style="font-weight: bold; font-size: 16px; color:brown">&nbsp;&nbsp;
+<br>&nbsp; <br>&nbsp;
+</td>
+</tr>
+</form>
+</table>
+
+        <table align="center" class="stap" cellpadding="0" cellspacing="0" width=100% border=0>
+	<tr>
+	<td colspan=11 align=center class="tekst_gwn" style="color:grey;"><br><img src='../../css/images/alert_icon.png' width=13>&nbsp;O*NET Occupation has more specialized occupation(s)</td>
+</tr>
+        <tr>
+         
+	<td colspan=11 align=left class="tekst_gwn" style="color:grey;"><br> <font size=+1><b>&nbsp;Legend:</b></font><br>
+        <ul>
+           <li><b>Main Rules:</b> These are leading rules, the score for each rule is expressed as <b>Score_A</b> in the mapping table (column 5)
+           <ol>
+                <li><b>Rule 1: </b>ESCO PreferredLabel = ONET-Reported/AlternateJobTitle. Example: warehouse worker<br>
+                <li><b>Rule 2: </b>ESCO-PreferredLabel <b>&sub;</b> ONET-Reported/AlternateJobTitle. Example: veterinary technician<br>
+                <li><b>Rule 3: </b>ESCO-PreferredLabel <b>&sup;</b> ONET-Reported/AlternateJobTitle. Example: veterinary technician/vacuum forming machine operator<br>
+                <li><b>Rule 4: </b>ESCO-PreferredLabel_word(s) <b>&sub;</b>  ONET-Reported/AlternateJobTitle. Example: Accountant<br>
+                <li><b>Rule 5: </b>ESCO-PreferredLabel_word <b>&sub;</b>  ONET-Reported/AlternateJobTitle (with threshold). Example: Warehouse order picker<br>
+           </ol>
+           <li><b>Additional Rules:</b> The score of the additional rules is combined with the score of each leading rule, to give more insight about the  similarity and the mapping
+        <ol>
+                <li><b>Rule 6: </b>ESCO-PreferredLabel_words <b>&sub;</b> ONET occupation Title (for all rules). The score of this rule is expressed as <b>Score_B</b> in the mapping table (column 8) and added to
+the final score of each rule.
+                <li><b>Rule 7: </b>ESCO-AltLabel(s) <b>&sub;</b> ONET Alternate_Titles (for all rules). The score of this rule is expressed as <b>Score_C</b> in the mapping table (column 9) and added to
+the final score of each rule.
+
+        </ol>
+        </ul>
+        <br>&nbsp;</td>
+
+      
+</tr>
+    </table>
+
+<script language="javascript" type="text/javascript">
+<!--
+function popitup(url, title, w, h) {
+  	var left = (screen.width/2)-(w/2);
+  	var top = (screen.height/2)-(h/2);
+	newwindow=window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
+// -->
+</script>
+</html>
